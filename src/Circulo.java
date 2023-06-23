@@ -12,6 +12,7 @@ public class Circulo extends Figura{
     }
 
     public double calcularPerimetro() {
+
         return 2 * Math.PI * radio;
     }
 }

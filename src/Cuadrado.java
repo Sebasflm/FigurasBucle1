@@ -14,28 +14,24 @@ public class Cuadrado extends Figura{
     }
 
     public double calcularArea() {
-        double lado = calcularDistancia(punto1, punto2);
+        // Cálculo del área del cuadrado utilizando los puntos
+        double lado = punto1.calcularDistancia(punto2);
         return lado * lado;
     }
 
     public double calcularPerimetro() {
-        double lado1 = calcularDistancia(punto1, punto2);
-        double lado2 = calcularDistancia(punto2, punto3);
+        // Cálculo del perímetro del cuadrado utilizando los puntos
+        double lado1 = punto1.calcularDistancia(punto2);
+        double lado2 = punto2.calcularDistancia(punto3);
         return (lado1 + lado2) * 2;
     }
 
-    private double calcularDistancia(Punto punto1, Punto punto2) {
-        double xDiff = punto2.getX() - punto1.getX();
-        double yDiff = punto2.getY() - punto1.getY();
-        double zDiff = punto2.getZ() - punto1.getZ();
-        return Math.sqrt(Math.pow(xDiff, 2) + Math.pow(yDiff, 2) + Math.pow(zDiff, 2));
-    }
-
     public boolean esCuadrado() {
-        double lado1 = calcularDistancia(punto1, punto2);
-        double lado2 = calcularDistancia(punto2, punto3);
-        double lado3 = calcularDistancia(punto3, punto4);
-        double lado4 = calcularDistancia(punto4, punto1);
+        // Verificar si los puntos forman un cuadrado
+        double lado1 = punto1.calcularDistancia(punto2);
+        double lado2 = punto2.calcularDistancia(punto3);
+        double lado3 = punto3.calcularDistancia(punto4);
+        double lado4 = punto4.calcularDistancia(punto1);
 
         return lado1 == lado2 && lado2 == lado3 && lado3 == lado4;
     }
