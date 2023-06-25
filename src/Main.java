@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
 
@@ -12,6 +10,9 @@ public class Main {
         System.out.println("1. Triángulo");
         System.out.println("2. Cuadrado");
         System.out.println("3. Círculo");
+        System.out.println("4. Pirámide");
+        System.out.println("5. Cubo");
+        System.out.println("6. Esfera");
         opcion = scanner.nextInt();
 
         switch (opcion) {
@@ -100,11 +101,103 @@ public class Main {
                 System.out.println("Perímetro del círculo: " + perimetroCirculo);
                 break;
 
+            case 4:
+                System.out.println("Ingrese las coordenadas del punto 1 (x, y, z):");
+                double x1Piramide = scanner.nextDouble();
+                double y1Piramide = scanner.nextDouble();
+                double z1Piramide = scanner.nextDouble();
+
+                System.out.println("Ingrese las coordenadas del punto 2 (x, y, z):");
+                double x2Piramide = scanner.nextDouble();
+                double y2Piramide = scanner.nextDouble();
+                double z2Piramide = scanner.nextDouble();
+
+                System.out.println("Ingrese las coordenadas del punto 3 (x, y, z):");
+                double x3Piramide = scanner.nextDouble();
+                double y3Piramide = scanner.nextDouble();
+                double z3Piramide = scanner.nextDouble();
+
+                System.out.println("Ingrese la altura de la pirámide:");
+                double alturaPiramide = scanner.nextDouble();
+
+                Punto punto1Piramide = new Punto(x1Piramide, y1Piramide, z1Piramide);
+                Punto punto2Piramide = new Punto(x2Piramide, y2Piramide, z2Piramide);
+                Punto punto3Piramide = new Punto(x3Piramide, y3Piramide, z3Piramide);
+
+                Piramide piramide = new Piramide(punto1Piramide, punto2Piramide, punto3Piramide, alturaPiramide);
+                double areaPiramide = piramide.calcularArea();
+                double perimetroPiramide = piramide.calcularPerimetro();
+                double volumenPiramide = piramide.calcularVolumen();
+
+                System.out.println("Área de la pirámide: " + areaPiramide);
+                System.out.println("Perímetro de la pirámide: " + perimetroPiramide);
+                System.out.println("Volumen de la pirámide: " + volumenPiramide);
+                break;
+
+            case 5:
+                System.out.println("Ingrese las coordenadas del punto 1 (x, y, z):");
+                double x1Cubo = scanner.nextDouble();
+                double y1Cubo = scanner.nextDouble();
+                double z1Cubo = scanner.nextDouble();
+
+                System.out.println("Ingrese las coordenadas del punto 2 (x, y, z):");
+                double x2Cubo = scanner.nextDouble();
+                double y2Cubo = scanner.nextDouble();
+                double z2Cubo = scanner.nextDouble();
+
+                System.out.println("Ingrese las coordenadas del punto 3 (x, y, z):");
+                double x3Cubo = scanner.nextDouble();
+                double y3Cubo = scanner.nextDouble();
+                double z3Cubo = scanner.nextDouble();
+
+                System.out.println("Ingrese las coordenadas del punto 4 (x, y, z):");
+                double x4Cubo = scanner.nextDouble();
+                double y4Cubo = scanner.nextDouble();
+                double z4Cubo = scanner.nextDouble();
+
+                Punto punto1Cubo = new Punto(x1Cubo, y1Cubo, z1Cubo);
+                Punto punto2Cubo = new Punto(x2Cubo, y2Cubo, z2Cubo);
+                Punto punto3Cubo = new Punto(x3Cubo, y3Cubo, z3Cubo);
+                Punto punto4Cubo = new Punto(x4Cubo, y4Cubo, z4Cubo);
+
+                Cubo cubo = new Cubo(punto1Cubo, punto2Cubo, punto3Cubo, punto4Cubo);
+                double areaCubo = cubo.calcularArea();
+                double perimetroCubo = cubo.calcularPerimetro();
+                double volumenCubo = cubo.calcularVolumen();
+
+                if (cubo.esCubo()) {
+                    System.out.println("Área del cubo: " + areaCubo);
+                    System.out.println("Perímetro del cubo: " + perimetroCubo);
+                    System.out.println("Volumen del cubo: " + volumenCubo);
+                } else {
+                    System.out.println("Los puntos ingresados no forman un cubo.");
+                }
+                break;
+
+            case 6:
+                System.out.println("Ingrese las coordenadas del centro de la esfera (x, y, z):");
+                double xCentroEsfera = scanner.nextDouble();
+                double yCentroEsfera = scanner.nextDouble();
+                double zCentroEsfera = scanner.nextDouble();
+
+                System.out.println("Ingrese el radio de la esfera:");
+                double radioEsfera = scanner.nextDouble();
+
+                Punto centroEsfera = new Punto(xCentroEsfera, yCentroEsfera, zCentroEsfera);
+
+                Esfera esfera = new Esfera(centroEsfera, radioEsfera);
+                double areaEsfera = esfera.calcularArea();
+                double perimetroEsfera = esfera.calcularPerimetro();
+                double volumenEsfera = esfera.calcularVolumen();
+
+                System.out.println("Área de la esfera: " + areaEsfera);
+                System.out.println("Perímetro de la esfera: " + perimetroEsfera);
+                System.out.println("Volumen de la esfera: " + volumenEsfera);
+                break;
+
             default:
-                System.out.println("Opción inválida.");
+                System.out.println("Opción inválida");
                 break;
         }
-
-        scanner.close();
     }
 }
