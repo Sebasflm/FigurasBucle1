@@ -117,12 +117,12 @@ public class Main {
                 double y3Piramide = scanner.nextDouble();
                 double z3Piramide = scanner.nextDouble();
 
-                System.out.println("Ingrese la altura de la pirámide:");
-                double alturaPiramide = scanner.nextDouble();
-
                 Punto punto1Piramide = new Punto(x1Piramide, y1Piramide, z1Piramide);
                 Punto punto2Piramide = new Punto(x2Piramide, y2Piramide, z2Piramide);
                 Punto punto3Piramide = new Punto(x3Piramide, y3Piramide, z3Piramide);
+
+                Triangulo trianguloPiramide = new Triangulo(punto1Piramide, punto2Piramide, punto3Piramide);
+                double alturaPiramide = trianguloPiramide.calcularAltura(punto1Piramide.calcularDistancia(punto2Piramide));
 
                 Piramide piramide = new Piramide(punto1Piramide, punto2Piramide, punto3Piramide, alturaPiramide);
                 double areaPiramide = piramide.calcularArea();

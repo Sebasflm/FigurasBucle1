@@ -24,7 +24,7 @@ public class Triangulo extends Figura{
         return lado1 + lado2 + lado3;
     }
 
-    private double calcularAltura(double base) {
+    public double calcularAltura(double base) {
         double lado1 = punto1.calcularDistancia(punto2);
         double lado2 = punto1.calcularDistancia(punto3);
         double lado3 = punto2.calcularDistancia(punto3);
