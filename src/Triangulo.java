@@ -10,14 +10,12 @@ public class Triangulo extends Figura{
     }
 
     public double calcularArea() {
-        // Cálculo del área del triángulo utilizando los puntos
         double base = punto1.calcularDistancia(punto2);
         double altura = calcularAltura(base);
         return (base * altura) / 2;
     }
 
     public double calcularPerimetro() {
-        // Cálculo del perímetro del triángulo utilizando los puntos
         double lado1 = punto1.calcularDistancia(punto2);
         double lado2 = punto2.calcularDistancia(punto3);
         double lado3 = punto3.calcularDistancia(punto1);
