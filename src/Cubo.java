@@ -15,6 +15,9 @@ public class Cubo extends Cuadrado {
         double lado = Math.sqrt(areaBase);
         return Math.pow(lado, 3);
     }
+    public String Nombre(){
+        return "Cubo";
+    }
     public boolean esCubo() {
         return super.esCuadrado();
     }

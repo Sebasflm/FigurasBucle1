@@ -32,4 +32,11 @@ public class Cuadrado extends Figura{
 
         return lado1 == lado2 && lado2 == lado3 && lado3 == lado4;
     }
+
+    public double calcularVolumen(){
+        return 0;
+    }
+    public String Nombre(){
+        return "Cuadrado";
+    }
 }

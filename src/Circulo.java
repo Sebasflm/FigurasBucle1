@@ -15,4 +15,10 @@ public class Circulo extends Figura{
 
         return 2 * Math.PI * radio;
     }
+    public double calcularVolumen(){
+        return 0;
+    }
+    public String Nombre(){
+        return "Circulo";
+    }
 }

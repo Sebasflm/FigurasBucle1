@@ -14,4 +14,7 @@ public class Esfera extends Circulo {
         double radio = super.calcularPerimetro();
         return (4 * Math.PI * Math.pow(radio, 3)) / 3;
     }
+    public String Nombre(){
+        return "Esfera";
+    }
 }

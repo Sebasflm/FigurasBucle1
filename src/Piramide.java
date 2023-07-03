@@ -25,4 +25,7 @@ public class Piramide extends Triangulo {
         double ladoBase = perimetroBase / 3; // Triángulo equilátero
         return Math.sqrt(Math.pow(ladoBase / 2, 2) - Math.pow(ladoBase / 2, 2));
     }
+    public String Nombre(){
+        return "Piramide";
+    }
 }

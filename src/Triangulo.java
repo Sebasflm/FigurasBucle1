@@ -30,4 +30,11 @@ public class Triangulo extends Figura{
         double area = Math.sqrt(semiperimetro * (semiperimetro - lado1) * (semiperimetro - lado2) * (semiperimetro - lado3));
         return (2 * area) / base;
     }
+
+    public double calcularVolumen(){
+        return 0;
+    }
+    public String Nombre(){
+        return "Triangulo";
+    }
 }
