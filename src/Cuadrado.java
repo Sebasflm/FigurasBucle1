@@ -29,8 +29,13 @@ public class Cuadrado extends Figura{
         double lado2 = punto2.calcularDistancia(punto3);
         double lado3 = punto3.calcularDistancia(punto4);
         double lado4 = punto4.calcularDistancia(punto1);
+        System.out.println("lado1: "+lado1);
+        System.out.println("lado2: "+lado2);
+        System.out.println("lado3: "+lado3);
+        System.out.println("lado4: "+lado4);
 
-        return lado1 == lado2 && lado2 == lado3 && lado3 == lado4;
+
+        return lado1 == lado2 && lado2 == lado3 && lado3 == lado4 ;
     }
 
     public double calcularVolumen(){

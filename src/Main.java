@@ -81,9 +81,12 @@ public class Main {
                     double areaCuadrado = cuadrado.calcularArea();
                     double perimetroCuadrado = cuadrado.calcularPerimetro();
 
-                    System.out.println("Área del cuadrado: " + areaCuadrado);
-                    System.out.println("Perímetro del cuadrado: " + perimetroCuadrado);
-
+                    if (cuadrado.esCuadrado()) {
+                        System.out.println("Área del cuadrado: " + areaCuadrado);
+                        System.out.println("Perímetro del cuadrado: " + perimetroCuadrado);
+                    }else {
+                        System.out.println("Los puntos ingresados no forman un cuadrado.");
+                    }
                     figuras.add(cuadrado);
                     break;
 
